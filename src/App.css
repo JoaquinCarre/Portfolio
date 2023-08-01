@@ -1,0 +1,212 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(19, 19, 18);
+}
+
+.logo-navbar {
+  margin: auto 10px;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+  margin-right: 3rem;
+  color: white;
+  font-family: monospace, 'Courier New', Courier;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar-menu li {
+  margin: auto 1rem;
+}
+
+.grid-components {
+  
+  height: 100%;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+}
+
+.span-2 {
+  grid-column: span 2;
+  width: 100%;
+}
+
+.first-section {
+  position: relative;
+}
+
+.grid-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.video-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.9;
+  mix-blend-mode: darken;
+}
+
+.picture-background {
+  width: 400px !important;
+  max-height: 400px;
+  margin: 15px;
+  background-color: rgba(0, 145, 255, 0.077);
+  border-radius: 52% 48% 30% 70% / 40% 35% 65% 60%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.personal-picture {
+  max-width: 400px;
+  min-width: 400px;
+  filter: drop-shadow(8px 8px 5px #111);
+  position: relative;
+  z-index: 1;
+}
+
+.block-content {
+  width: 100%;
+}
+
+.block-icon {
+  font-size: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.about_me-block {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 145, 255, 0.077);
+  border-radius: 20px;
+  font-size: 17px;
+  font-family: monospace, 'Courier New', Courier;
+  color: white;
+  opacity: 0.6;
+  padding: 10px 30px;
+}
+
+.about_me-block strong {
+  color: rgb(0, 162, 255);
+}
+
+.certificates-block {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 145, 255, 0.077);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.list-of-certificates {
+  padding: 0px;
+}
+
+.list-of-certificates img {
+  margin-right: 10px;
+}
+
+.list-of-certificates li {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.list-of-certificates li a {
+  display: flex;
+  align-items: center;
+}
+
+.certificate-link {
+  text-align: start;
+  margin: 8px auto;
+  color: white;
+  font-family: monospace, 'Courier New', Courier;
+}
+
+.link-icon-certificates {
+  margin-left: 10px;
+}
+
+.block-text {
+  font-size: 35px;
+  font-family: monospace, 'Courier New', Courier;
+  font-weight: 100;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.block-text-bold {
+  font-weight: 900;
+  font-size: 45px;
+}
+
+.block-text p {
+  margin: 0px;
+  opacity: 0.7;
+}
+
+.chevron-icon {
+  position: relative;
+  z-index: 1;
+  rotate: -90deg;
+  animation: jump 0.8s infinite;
+}
+
+@keyframes jump {
+  0%, 100% {top: 10px;}
+  30% {top: 0px;}
+}
+
+/* FORMULARIO */
+.form-block {
+  height: 570px;
+  overflow: hidden;
+  scrollbar-width: 0px;
+}
