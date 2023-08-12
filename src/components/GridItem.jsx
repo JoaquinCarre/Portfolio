@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Me from './Me';
 import Certificates from './Certificates';
+import ContactForm from './ContactForm';
+import ProjectCard from './ProjectCard';
 
 const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalImage, me, career }) => {
   const [showMe, setShowMe] = useState(false);
@@ -61,18 +63,10 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
   if (section == "projects") {
     return (
       <div className="grid-block span-2" style={{ backgroundColor }}>
-        <div className="block-content">
-          {icon && <div className="block-icon">{icon}</div>}
-          {texts && texts.map((text, index) => (
-            <div className="block-text" key={index}>
-              <p>{text}</p>
-            </div>
-          ))}
-          {textsBold && textsBold.map((text, index) => (
-            <div className="block-text block-text-bold" key={index}>
-              <p>{text}</p>
-            </div>
-          ))}
+        <div className="block-content projects-content">
+          <ProjectCard image="./src/assets/img-jovenaccion.png" title="Jóvenes en Acción" description={<>JeA es una red juvenil que busca <strong>visibilizar</strong> jóvenes inspiradores, <strong>conectar</strong> personas e instituciones con iniciativa y <strong>fomentar</strong> acciones.</>} link="https://jovenaccion.com" />
+          <ProjectCard image="./src/assets/img-simonsays.png" title="Simón Dice" description={<><strong>Simón Dice</strong> es un juego donde se crea una serie de sonidos y luces que el jugador debe repetir.</>} link="https://joaquincarre.github.io/Simon-Says/" />
+          <ProjectCard image="./src/assets/img-simonsays.png" title="Equinoccio Lúdico" description={<><strong>Tienda online de juegos de mesa</strong> de mi propia editorial que en algún futuro llevaré a cabo. Proyecto realizado en el curso de ReactJS de CoderHouse</>} link="https://joaquincarre.github.io/tienda" />
         </div>
       </div>
     );
@@ -102,11 +96,8 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
     return (
       <div className="grid-block span-2" style={{ backgroundColor }}>
         <div className="block-content">
-          <h2>Enviame un mensaje</h2>
-          <div className='form-block'>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScZIcmyJSzTc9vEbCrqdXrvNJ5HD1J5byCwscMoxnbSnXAw1Q/viewform?embedded=true" width="640" height="650" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-          </div>
-          <h3>Ó contactame a través de mis RRSS</h3>
+          <ContactForm />
+          <h3 className="text-white">O contactáme a través de mis RRSS</h3>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><linearGradient id="rL2wppHyxHVbobwndsT6Ca" x1="4" x2="44" y1="23.508" y2="23.508" gradientUnits="userSpaceOnUse">
               <stop offset="0" stop-color="#4c4c4c"/><stop offset="1" stop-color="#343434"/>

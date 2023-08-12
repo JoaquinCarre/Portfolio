@@ -6,11 +6,10 @@ const Navbar = () => {
         <div className="navbar">
             <img src="/src/assets/logoJC.png" alt="Logo Portfolio" width={40} height={40} className="logo-navbar" />
             <ul className="navbar-menu">
-                <li>Inicio</li>
-                <li>Sobre mi</li>
-                <li>Proyectos</li>
-                <li>Skills</li>
-                <li>Contacto</li>
+                <li><a href="#about_me" className="text-white">Sobre mi</a></li>
+                <li><a href="#projects" className="text-white">Proyectos</a></li>
+                <li><a href="#skills" className="text-white">Habilidades</a></li>
+                <li><a href="#contact" className="text-white">Contacto</a></li>
             </ul>
         </div>
     )
