@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Me from './Me';
 import Certificates from './Certificates';
-import ContactForm from './ContactForm';
 import ProjectCard from './ProjectCard';
+import SkillsCards from './SkillsCards';
+import ContactForm from './ContactForm';
 
 const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalImage, me, career }) => {
   const [showMe, setShowMe] = useState(false);
@@ -21,7 +22,7 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
     setShowCertificates(false);
   };
 
-  if (section == "about me") {
+  if (section === "about me") {
     if (personalImage) {
       return (
         <div className="grid-block" style={{ backgroundColor }}>
@@ -60,7 +61,7 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
     );
   }
 
-  if (section == "projects") {
+  if (section === "projects") {
     return (
       <div className="projects-block span-2" style={{ backgroundColor }}>
         <div className="block-content projects-content">
@@ -73,32 +74,24 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
     );
   }
 
-  if (section == "skills") {
+  if (section === "skills") {
     return (
       <div className="grid-block span-2" style={{ backgroundColor }}>
         <div className="block-content">
-          {icon && <div className="block-icon">{icon}</div>}
-          {texts && texts.map((text, index) => (
-            <div className="block-text" key={index}>
-              <p>{text}</p>
-            </div>
-          ))}
-          {textsBold && textsBold.map((text, index) => (
-            <div className="block-text block-text-bold" key={index}>
-              <p>{text}</p>
-            </div>
-          ))}
+          <SkillsCards skill="front-end" />
+          <SkillsCards skill="back-end" />
+          <SkillsCards skill="other" />
         </div>
       </div>
     );
   }
 
-  if (section == "contact") {
+  if (section === "contact") {
     return (
       <div className="grid-block span-2" style={{ backgroundColor }}>
         <div className="block-content">
           <ContactForm />
-          <h3 className="text-white">O contactáme a través de mis Redes Sociales:</h3>
+          <h3 className="text-white text-contact">O contactáme a través de mis Redes Sociales:</h3>
           <div className='rrss-contact-form'>
             <a href="https://github.com/JoaquinCarre">
               <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px">

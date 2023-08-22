@@ -1,5 +1,7 @@
-html {
-  scroll-behavior: smooth;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: monospace, 'Courier New', Courier;
 }
 
 #root {
@@ -28,7 +30,7 @@ header {
 }
 
 .logo-navbar {
-  margin: 0px 10px;
+  margin: 10px 10px;
 }
 
 .navbar-menu {
@@ -47,7 +49,15 @@ header {
 }
 
 .grid-components {
-  height: 100%;
+  scroll-behavior: smooth;
+  overflow-y: scroll; /* Habilitar el desplazamiento vertical */
+  scroll-snap-type: y mandatory; /* Tipo de scroll snap vertical */
+  height: 100vh; /* Altura del contenedor (tamaño de la ventana gráfica) */
+}
+
+.mainsection {
+  scroll-snap-align: start; /* Comportamiento de alineación del scroll snap */
+  height: 100vh; /* Altura de cada sección (tamaño de la ventana gráfica) */
 }
 
 section {
@@ -61,7 +71,7 @@ section {
   width: 100%;
 }
 
-.first-section {
+.mainsection1 {
   position: relative;
 }
 
@@ -114,6 +124,10 @@ video {
 
 .block-content {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .block-icon {
@@ -222,6 +236,7 @@ video {
 .projects-content {
   padding: 70px 0px 15px 0px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   overflow: auto;
@@ -310,13 +325,71 @@ video {
   text-decoration: underline;
 }
 
+/* HABILIDADES */
+.block-skill-card {
+  border: #282828 4px solid;
+  border-radius: 20px;
+  position: relative;
+  background-color: #e0e0e0;
+  padding: 20px;
+  width: 800px;
+  margin: 20px 40px;
+}
+
+.separator-border-title {
+  position: absolute;
+  border-top: #281DEF 4px solid;
+  top: -4px;
+  left: 20px;
+  margin: 0px;
+  background-color: #e0e0e0;
+  color: transparent;
+}
+
+.separator1 {
+  width: 125px;
+}
+
+.separator2 {
+  width: 120px;
+}
+
+.separator3 {
+  width: 220px;
+}
+
+.title-skill-card {
+  position: absolute;
+  top: -23px;
+  left: 20px;
+  margin: 0px;
+  padding: 0px 5px;
+  color: aliceblue;
+  font-size: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 800;
+  -webkit-text-stroke: 1.2px black;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.icons-skill-card {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons-skill-card img, svg {
+  margin: 0px 10px;
+}
 
 /* CONTACTO */
 .form-block {
   background-color: rgba(55, 55, 176, 0.5);
-  margin: 70px 50px 0px 50px;
+  width: 90%;
   border-radius: 15px;
   padding: 15px;
+  margin-top: 30px;
 }
 
 .form {
@@ -349,6 +422,10 @@ input, textarea {
 
 textarea {
   resize: none;
+}
+
+.text-contact {
+  margin-top: 30px;
 }
 
 .rrss-contact-form {
