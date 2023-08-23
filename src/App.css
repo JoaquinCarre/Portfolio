@@ -4,6 +4,10 @@
   font-family: monospace, 'Courier New', Courier;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 #root {
   width: 100vw;
   height: 100vh;
@@ -39,13 +43,16 @@ header {
   justify-content: end;
   margin-right: 3rem;
   color: white;
-  font-family: monospace, 'Courier New', Courier;
   font-size: 18px;
   font-weight: bold;
 }
 
 .navbar-menu li {
   margin: auto 1rem;
+}
+
+.navbar-menu li a:hover {
+  color: rgb(194, 198, 0);
 }
 
 .grid-components {
@@ -142,7 +149,6 @@ video {
   background-color: rgba(0, 145, 255, 0.077);
   border-radius: 20px;
   font-size: 17px;
-  font-family: monospace, 'Courier New', Courier;
   color: white;
   opacity: 0.6;
   padding: 10px 30px;
@@ -157,11 +163,11 @@ video {
   z-index: 1;
   background-color: rgba(0, 145, 255, 0.077);
   border-radius: 20px;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .list-of-certificates {
-  padding: 0px;
+  padding: 10px;
 }
 
 .list-of-certificates img {
@@ -181,9 +187,8 @@ video {
 
 .certificate-link {
   text-align: start;
-  margin: 8px auto;
+  margin: 12px auto;
   color: white;
-  font-family: monospace, 'Courier New', Courier;
 }
 
 .link-icon-certificates {
@@ -192,7 +197,6 @@ video {
 
 .block-text {
   font-size: 35px;
-  font-family: monospace, 'Courier New', Courier;
   font-weight: 100;
   color: white;
   position: relative;

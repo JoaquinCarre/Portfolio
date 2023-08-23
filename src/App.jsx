@@ -14,12 +14,12 @@ function App() {
       <main>
         <div className='grid-components'>
           <section className='mainsection mainsection1' id='about_me'>
-            <GridItem section="about me" gridCanva="grid-block" personalImage="./src/assets/me-nobg.png" backgroundColor="#05006B" />
-            <GridItem section="about me" gridCanva="grid-block" backgroundColor="#05006B" me
+            <GridItem section="about me" gridCanva="grid-block" personalImage="./src/assets/me-nobg.png" backgroundColor="#050045" />
+            <GridItem section="about me" gridCanva="grid-block" backgroundColor="#050045" me
               texts={["Hola, soy"]}
               textsBold={["Joaquín Carré"]}
               icon={<span>👋</span>} />
-            <GridItem section="about me" gridCanva="grid-block" backgroundColor="#05006B" career
+            <GridItem section="about me" gridCanva="grid-block" backgroundColor="#050045" career
               textsBold={["Programador Web", "Full Stack", "JavaScript"]}
               icon={<span>👨‍💻</span>} />
             <VideoBackground videoUrl="./src/assets/video/blue-bg.mp4" />
