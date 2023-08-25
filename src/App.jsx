@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
+import { useLanguage } from './components/context/LanguageContext';
 import Navbar from './components/Navbar';
 import GridItem from './components/GridItem';
 import TitleSection from './components/TitleSection';
 import VideoBackground from './components/VideoBackground';
 
 function App() {
+  const { language } = useLanguage();
+
   return (
     <>
       <header>
@@ -16,11 +19,11 @@ function App() {
           <section className='mainsection mainsection1' id='about_me'>
             <GridItem section="about me" gridCanva="grid-block" personalImage="./src/assets/me-nobg.png" backgroundColor="#050045" />
             <GridItem section="about me" gridCanva="grid-block" backgroundColor="#050045" me
-              texts={["Hola, soy"]}
+              texts={language === 'es' ? ["Hola, soy"] : ["Hi, I'm"]}
               textsBold={["Joaquín Carré"]}
               icon={<span>👋</span>} />
             <GridItem section="about me" gridCanva="grid-block" backgroundColor="#050045" career
-              textsBold={["Programador Web", "Full Stack", "JavaScript"]}
+              textsBold={language === 'es' ? ["Programador Web", "Full Stack", "JavaScript"] : ["Full Stack", "Web Developer", "JavaScript"]}
               icon={<span>👨‍💻</span>} />
             <VideoBackground videoUrl="./src/assets/video/blue-bg.mp4" />
           </section>

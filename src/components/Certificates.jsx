@@ -1,10 +1,13 @@
 import React from 'react';
+import { useLanguage } from './context/LanguageContext';
 
 const Certificates = () => {
+    const { language } = useLanguage();
+
     return (
         <div className='certificates-block'>
             <ul className='list-of-certificates'>
-                <li className='certificate-link'><img src="./src/assets/coder.jpeg" alt="CoderHouse icon" width={35} /> Curso Desarrollo web - 2022 
+                <li className='certificate-link'><img src="./src/assets/coder.jpeg" alt="CoderHouse icon" width={35} /> { language === 'es' ? 'Curso Desarrollo web - 2022' : 'Web Development Course - 2022'}
                     <a href="https://us.coderhouse.com/certificados/624ae07573f89c0018990a75" target="_blank" rel="noopener noreferrer">
                         <svg width="15px" height="15px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='link-icon-certificates'>
                             <path d="M15.7285 3.88396C17.1629 2.44407 19.2609 2.41383 20.4224 3.57981C21.586 4.74798 21.5547 6.85922 20.1194 8.30009L17.6956 10.7333C17.4033 11.0268 17.4042 11.5017 17.6976 11.794C17.9911 12.0863 18.466 12.0854 18.7583 11.7919L21.1821 9.35869C23.0934 7.43998 23.3334 4.37665 21.4851 2.5212C19.6346 0.663551 16.5781 0.905664 14.6658 2.82536L9.81817 7.69182C7.90688 9.61053 7.66692 12.6739 9.51519 14.5293C9.80751 14.8228 10.2824 14.8237 10.5758 14.5314C10.8693 14.2391 10.8702 13.7642 10.5779 13.4707C9.41425 12.3026 9.44559 10.1913 10.8809 8.75042L15.7285 3.88396Z" fill="#2d4fb6"/>
@@ -12,7 +15,7 @@ const Certificates = () => {
                         </svg>
                     </a>
                 </li>
-                <li className='certificate-link'><img src="./src/assets/coder.jpeg" alt="CoderHouse icon" width={35} /> Curso JavaScript - 2022 
+                <li className='certificate-link'><img src="./src/assets/coder.jpeg" alt="CoderHouse icon" width={35} /> { language === 'es' ? 'Curso JavaScript - 2022' : 'JavaScript Course - 2022'} 
                     <a href="https://us.coderhouse.com/certificados/62c3126fa1eff300244fd5c9" target="_blank" rel="noopener noreferrer">
                         <svg width="15px" height="15px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='link-icon-certificates'>
                             <path d="M15.7285 3.88396C17.1629 2.44407 19.2609 2.41383 20.4224 3.57981C21.586 4.74798 21.5547 6.85922 20.1194 8.30009L17.6956 10.7333C17.4033 11.0268 17.4042 11.5017 17.6976 11.794C17.9911 12.0863 18.466 12.0854 18.7583 11.7919L21.1821 9.35869C23.0934 7.43998 23.3334 4.37665 21.4851 2.5212C19.6346 0.663551 16.5781 0.905664 14.6658 2.82536L9.81817 7.69182C7.90688 9.61053 7.66692 12.6739 9.51519 14.5293C9.80751 14.8228 10.2824 14.8237 10.5758 14.5314C10.8693 14.2391 10.8702 13.7642 10.5779 13.4707C9.41425 12.3026 9.44559 10.1913 10.8809 8.75042L15.7285 3.88396Z" fill="#2d4fb6"/>
@@ -20,7 +23,7 @@ const Certificates = () => {
                         </svg>
                     </a>
                 </li>
-                <li className='certificate-link'><img src="./src/assets/coder.jpeg" alt="CoderHouse icon" width={35} /> Curso ReactJs - 2022 
+                <li className='certificate-link'><img src="./src/assets/coder.jpeg" alt="CoderHouse icon" width={35} /> { language === 'es' ? 'Curso ReactJS - 2022' : 'ReactJS Course - 2022'} 
                     <a href="https://us.coderhouse.com/certificados/6314f487cfd3fb0024acbd91" target="_blank" rel="noopener noreferrer">
                         <svg width="15px" height="15px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='link-icon-certificates'>
                             <path d="M15.7285 3.88396C17.1629 2.44407 19.2609 2.41383 20.4224 3.57981C21.586 4.74798 21.5547 6.85922 20.1194 8.30009L17.6956 10.7333C17.4033 11.0268 17.4042 11.5017 17.6976 11.794C17.9911 12.0863 18.466 12.0854 18.7583 11.7919L21.1821 9.35869C23.0934 7.43998 23.3334 4.37665 21.4851 2.5212C19.6346 0.663551 16.5781 0.905664 14.6658 2.82536L9.81817 7.69182C7.90688 9.61053 7.66692 12.6739 9.51519 14.5293C9.80751 14.8228 10.2824 14.8237 10.5758 14.5314C10.8693 14.2391 10.8702 13.7642 10.5779 13.4707C9.41425 12.3026 9.44559 10.1913 10.8809 8.75042L15.7285 3.88396Z" fill="#2d4fb6"/>
@@ -28,7 +31,7 @@ const Certificates = () => {
                         </svg>
                     </a>
                 </li>
-                <li className='certificate-link'><img src="./src/assets/coder.jpeg" alt="CoderHouse icon" width={35} /> Curso Backend - 2022/23
+                <li className='certificate-link'><img src="./src/assets/coder.jpeg" alt="CoderHouse icon" width={35} /> { language === 'es' ? 'Curso Backend - 2022/23' : 'Backend Course - 2022/23'} 
                     <a href="https://us.coderhouse.com/certificados/641033b2e64ebb000288be14" target="_blank" rel="noopener noreferrer">
                         <svg width="15px" height="15px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='link-icon-certificates'>
                             <path d="M15.7285 3.88396C17.1629 2.44407 19.2609 2.41383 20.4224 3.57981C21.586 4.74798 21.5547 6.85922 20.1194 8.30009L17.6956 10.7333C17.4033 11.0268 17.4042 11.5017 17.6976 11.794C17.9911 12.0863 18.466 12.0854 18.7583 11.7919L21.1821 9.35869C23.0934 7.43998 23.3334 4.37665 21.4851 2.5212C19.6346 0.663551 16.5781 0.905664 14.6658 2.82536L9.81817 7.69182C7.90688 9.61053 7.66692 12.6739 9.51519 14.5293C9.80751 14.8228 10.2824 14.8237 10.5758 14.5314C10.8693 14.2391 10.8702 13.7642 10.5779 13.4707C9.41425 12.3026 9.44559 10.1913 10.8809 8.75042L15.7285 3.88396Z" fill="#2d4fb6"/>

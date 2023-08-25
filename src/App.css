@@ -40,8 +40,6 @@ header {
 .navbar-menu {
   list-style-type: none;
   display: flex;
-  justify-content: end;
-  margin-right: 3rem;
   color: white;
   font-size: 18px;
   font-weight: bold;
@@ -55,6 +53,52 @@ header {
   color: rgb(194, 198, 0);
 }
 
+.languages {
+  display: flex;
+  gap: 10px;
+  margin: 0px 10px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.button-lang-es {
+  padding: 0px;
+  background-image: url("./src/assets/icon-spanish.png");
+  background-position: center center;
+  background-size: cover;
+  width: 40px;
+  height: 27px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+}
+
+.button-lang-es:hover {
+  outline: none;
+}
+
+.button-lang-es:focus {
+  outline: none;
+}
+
+.button-lang-en {
+  padding: 0px;
+  background-image: url("./src/assets/icon-english.png");
+  background-position: center center;
+  background-size: cover;
+  width: 40px;
+  height: 27px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+}
+
+.button-lang-en:focus {
+  outline: none;
+}
+
+/* MAIN */
 .grid-components {
   scroll-behavior: smooth;
   overflow-y: scroll; /* Habilitar el desplazamiento vertical */
