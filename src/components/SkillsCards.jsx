@@ -1,6 +1,9 @@
 import React from "react";
+import { useLanguage } from "./context/LanguageContext";
 
 const SkillsCards = ({ skill }) => {
+    const { language } = useLanguage();
+
     if (skill === "front-end") {
         return (
             <div className="block-skill-card">
@@ -40,8 +43,8 @@ const SkillsCards = ({ skill }) => {
     if (skill === "other") {
         return (
             <div className="block-skill-card">
-                <div className="separator-border-title separator3"></div>
-                <h3 className="title-skill-card">Otras Habilidades</h3>
+                <div className={language === 'es' ? "separator-border-title separator3" : "separator-border-title separator4"}></div>
+                <h3 className="title-skill-card">{language === 'es' ? 'Otras Habilidades' : 'Other Skills' }</h3>
                 <div className="icons-skill-card">
                     <img src="./src/assets/icon-github.png" alt="Icono GitHub" width={50}/>
                     <img src="./src/assets/icon-photoshop.png" alt="Icono Photoshop" width={50}/>

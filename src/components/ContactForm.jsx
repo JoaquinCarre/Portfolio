@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useLanguage } from './context/LanguageContext';
 
 const ContactForm = () => {
+  const { language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,9 +26,9 @@ const ContactForm = () => {
 
   return (
     <div className='form-block text-white'>
-      <h2>Enviame un mensaje</h2>
+      <h2>{ language === 'es' ? "Enviame un mensaje" : "Send me a Message" }</h2>
       <form onSubmit={handleSubmit} className='form'>
-        <label htmlFor="name">Nombre</label>
+        <label htmlFor="name">{ language === 'es' ? "Nombre" : "Name" }</label>
         <input
           type="text"
           id="name"
@@ -44,7 +46,7 @@ const ContactForm = () => {
           onChange={handleChange}
           required
         />
-        <label htmlFor="message">Mensaje</label>
+        <label htmlFor="message">{ language === 'es' ? "Mensaje" : "Message" }</label>
         <textarea
           id="message"
           name="message"
@@ -53,7 +55,7 @@ const ContactForm = () => {
           rows="4"
           required
         ></textarea>
-        <button type="submit">Enviar</button>
+        <button type="submit">{ language === 'es' ? "Enviar" : "Send" }</button>
       </form>
     </div>
   );

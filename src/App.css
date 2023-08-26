@@ -134,6 +134,13 @@ section {
   align-items: center;
 }
 
+.github-link {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  color: rgba(192, 184, 174, 0.508);
+}
+
 video {
   position: absolute;
   top: 0;
@@ -395,7 +402,7 @@ video {
 }
 
 .separator1 {
-  width: 125px;
+  width: 130px;
 }
 
 .separator2 {
@@ -404,6 +411,10 @@ video {
 
 .separator3 {
   width: 220px;
+}
+
+.separator4 {
+  width: 148px;
 }
 
 .title-skill-card {
@@ -427,7 +438,7 @@ video {
   align-items: center;
 }
 
-.icons-skill-card img, svg {
+.icons-skill-card img, .icons-skill-card svg {
   margin: 0px 10px;
 }
 
@@ -476,8 +487,13 @@ textarea {
   margin-top: 30px;
 }
 
-.rrss-contact-form {
+.other-contacts {
   display: flex;
   justify-content: center;
   gap: 30px;
+}
+
+.alternative-contact {
+  display: flex;
+  align-items: center;
 }
