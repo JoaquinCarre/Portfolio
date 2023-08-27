@@ -6,7 +6,7 @@ import SkillsCards from './SkillsCards';
 import ContactForm from './ContactForm';
 import { useLanguage } from './context/LanguageContext';
 
-const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalImage, me, career }) => {
+const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalImage, me, career, classDescription }) => {
   const [showMe, setShowMe] = useState(false);
   const [showTexts, setShowTexts] = useState(true);
   const [showCertificates, setShowCertificates] = useState(false);
@@ -24,10 +24,15 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
     setShowCertificates(false);
   };
 
+  const handleCloseMe = (value) => {
+    setShowMe(value);
+    setShowTexts(true);
+  };
+
   if (section === "about me") {
     if (personalImage) {
       return (
-        <div className="grid-block" style={{ backgroundColor }}>
+        <div className="grid-block image-me" style={{ backgroundColor }}>
           <div className="block-content picture-background">
             <img src={personalImage} alt="Personal photo" className="personal-picture" width="250px" />
           </div>
@@ -47,11 +52,11 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
     }
 
     return (
-      <div className="grid-block" style={{ backgroundColor }}>
+      <div className={`grid-block ${classDescription}`} style={{ backgroundColor }}>
         <div className="block-content">
           {icon && <div className="block-icon">{icon}</div>}
           <div className='change-block' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            {showMe && <Me />}
+            {showMe && <Me onMeChange={handleCloseMe} />}
             {showTexts &&
               <>
                 {texts && texts.map((text, index) => (

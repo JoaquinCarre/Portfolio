@@ -18,11 +18,11 @@ function App() {
         <div className='grid-components'>
           <section className='mainsection mainsection1' id='about_me'>
             <GridItem section="about me" gridCanva="grid-block" personalImage="./src/assets/me-nobg.png" backgroundColor="#050045" />
-            <GridItem section="about me" gridCanva="grid-block" backgroundColor="#050045" me
+            <GridItem section="about me" gridCanva="grid-block" backgroundColor="#050045" me classDescription="me"
               texts={language === 'es' ? ["Hola, soy"] : ["Hi, I'm"]}
               textsBold={["Joaquín Carré"]}
               icon={<span>👋</span>} />
-            <GridItem section="about me" gridCanva="grid-block" backgroundColor="#050045" career
+            <GridItem section="about me" gridCanva="grid-block" backgroundColor="#050045" career classDescription="career"
               textsBold={language === 'es' ? ["Programador Web", "Full Stack", "JavaScript"] : ["Full Stack", "Web Developer", "JavaScript"]}
               icon={<span>👨‍💻</span>} />
             <VideoBackground videoUrl="./src/assets/video/blue-bg.mp4" />
@@ -34,11 +34,11 @@ function App() {
             <GridItem section="projects" gridCanva="grid-block span-2" backgroundColor="#7c8071" texts={["Proyectos"]} />
           </section>
           <section className="mainsection" id='skills'>
-            <GridItem section="skills" gridCanva="grid-block span-2" backgroundColor="#281DEF"
-              texts={["Lista de habilidades"]} />
             <TitleSection backgroundColor="#231AAB"
               title={language === 'es' ? 'Mis Habilidades Tecnológicas' : 'My Tech Skills' }
               icon={<span>💻</span>} />
+            <GridItem section="skills" gridCanva="grid-block span-2" backgroundColor="#281DEF"
+              texts={["Lista de habilidades"]} />
           </section>
           <section className="mainsection" id='contact'>
             <TitleSection backgroundColor="#322F6B"

@@ -1,7 +1,11 @@
 import React from 'react';
 import { useLanguage } from './context/LanguageContext';
 
-const Me = () => {
+const Me = ({ onMeChange }) => {
+    const handleCloseMe = () => {
+        onMeChange(false); // Llama a la función del padre para actualizar showMe
+      };
+
     const { language } = useLanguage();
     return (
         <div className='about_me-block'>
@@ -21,6 +25,7 @@ const Me = () => {
                     <br />
                     <p>I am currently <strong>seeking my first professional experience</strong> at YOUR company.</p>
                 </>}
+                <div className='x-icon'  onClick={handleCloseMe}>&times;</div>
         </div>
     );
 };

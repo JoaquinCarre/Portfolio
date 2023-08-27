@@ -98,6 +98,12 @@ header {
   outline: none;
 }
 
+@media only screen and (max-width:900px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+
 /* MAIN */
 .grid-components {
   scroll-behavior: smooth;
@@ -132,6 +138,18 @@ section {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.image-me {
+  grid-area: "picture";
+}
+
+.me {
+  grid-area: "descriptionMe";
+}
+
+.career {
+  grid-area: "career";
 }
 
 .github-link {
@@ -173,8 +191,7 @@ video {
 }
 
 .personal-picture {
-  max-width: 400px;
-  min-width: 400px;
+  width: 400px;
   filter: drop-shadow(8px 8px 5px #111);
   position: relative;
   z-index: 1;
@@ -207,6 +224,15 @@ video {
 
 .about_me-block strong {
   color: rgb(0, 162, 255);
+}
+
+.x-icon {
+  position: absolute;
+  cursor: pointer;
+  top: -10px;
+  right: 10px;
+  font-size: 30px;
+  display: none;
 }
 
 .certificates-block {
@@ -274,6 +300,83 @@ video {
 @keyframes jump {
   0%, 100% {top: 10px;}
   30% {top: 0px;}
+}
+
+@media only screen and (max-width:1200px) {
+  .personal-picture {
+    width: 300px;
+  }
+
+  .picture-background {
+    width: 300px !important;
+    max-height: 300px;
+  }
+
+  .github-link {
+    font-size: 14px;
+  }
+
+  .block-text {
+    font-size: 25px;
+  }
+  
+  .block-text-bold {
+    font-size: 35px;
+  }
+
+  .about_me-block {
+    font-size: 14px;
+  }
+
+  .certificates-block {
+    padding: 5px 10px;
+  }
+
+  .list-of-certificates {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width:1024px) {
+  .personal-picture {
+    width: 200px;
+  }
+
+  .picture-background {
+    width: 200px !important;
+    max-height: 200px;
+  }
+
+  .github-link {
+    font-size: 12px;
+  }
+
+  .github-link svg{
+    width: 25px;
+  }
+
+}
+
+@media only screen and (max-width:768px) {
+  section {
+    grid-template-columns: repeat(1, 2fr);
+  }
+  
+  .mainsection1 {
+    grid-template-rows: auto auto;
+  }
+  
+  .mainsection1 .grid-block:nth-child(1),
+  .mainsection1 .grid-block:nth-child(2) {
+    grid-column: span 1;
+    grid-row: 1;
+  }
+  
+  .mainsection1 .grid-block:nth-child(3) {
+    grid-column: span 2;
+    grid-row: 2;
+  }
+
 }
 
 /* PROYECTOS */
@@ -362,7 +465,7 @@ video {
   justify-content: space-evenly;
 }
 
-.svg {
+.svg-link {
   width: 25px;
   height: 25px;
   transform: translateY(25%);
@@ -387,7 +490,8 @@ video {
   position: relative;
   background-color: #e0e0e0;
   padding: 20px;
-  width: 800px;
+  max-width: 800px;
+  min-width: 600px;
   margin: 20px 40px;
 }
 
@@ -434,12 +538,19 @@ video {
 .icons-skill-card {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
 .icons-skill-card img, .icons-skill-card svg {
   margin: 0px 10px;
+}
+
+@media only screen and (max-width:900px) {
+  .block-skill-card {
+    width: 400px;
+  }
 }
 
 /* CONTACTO */
