@@ -6,7 +6,7 @@ import SkillsCards from './SkillsCards';
 import ContactForm from './ContactForm';
 import { useLanguage } from './context/LanguageContext';
 
-const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalImage, me, career, classDescription }) => {
+const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalImage, me, career}) => {
   const [showMe, setShowMe] = useState(false);
   const [showTexts, setShowTexts] = useState(true);
   const [showCertificates, setShowCertificates] = useState(false);
@@ -52,7 +52,7 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
     }
 
     return (
-      <div className={`grid-block ${classDescription}`} style={{ backgroundColor }}>
+      <div className="grid-block" style={{ backgroundColor }}>
         <div className="block-content">
           {icon && <div className="block-icon">{icon}</div>}
           <div className='change-block' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
