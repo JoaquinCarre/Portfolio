@@ -1,7 +1,11 @@
 import React from 'react';
 import { useLanguage } from './context/LanguageContext';
 
-const Certificates = () => {
+const Certificates = ({ onCertificatesChange }) => {
+    const handleCloseCertificates = () => {
+        onCertificatesChange(false); // Llama a la función del padre para actualizar showMe
+      };
+
     const { language } = useLanguage();
 
     return (
@@ -40,6 +44,7 @@ const Certificates = () => {
                     </a>
                 </li>
             </ul>
+            <div className='x-icon'  onClick={handleCloseCertificates}>&times;</div>
         </div>
     );
 };

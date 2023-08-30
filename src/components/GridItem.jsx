@@ -29,6 +29,11 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
     setShowTexts(true);
   };
 
+  const handleCloseCertificates = (value) => {
+    setShowCertificates(value);
+    setShowTexts(true);
+  };
+
   if (section === "about me") {
     if (personalImage) {
       return (
@@ -72,7 +77,7 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
                 <img src="./src/assets/chevron-icon-blue.png" alt="chevron icon" className='chevron-icon' width={40}/>
               </>
             }
-            {showCertificates && <Certificates />}
+            {showCertificates && <Certificates  onCertificatesChange={handleCloseCertificates} />}
           </div>
         </div>
       </div>

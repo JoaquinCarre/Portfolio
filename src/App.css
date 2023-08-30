@@ -229,8 +229,8 @@ video {
 .x-icon {
   position: absolute;
   cursor: pointer;
-  top: -10px;
-  right: 10px;
+  top: 0vh;
+  right: 2vh;
   font-size: 30px;
   display: none;
 }
@@ -241,6 +241,7 @@ video {
   background-color: rgba(0, 145, 255, 0.077);
   border-radius: 20px;
   padding: 10px 20px;
+  color: white;
 }
 
 .list-of-certificates {
@@ -363,8 +364,9 @@ video {
   }
   
   .mainsection1 {
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 2fr;
+    position: relative;
   }
   
   .mainsection1 .grid-block:nth-child(1),
@@ -385,26 +387,45 @@ video {
   .about_me-block {
     font-size: 12px;
     position: absolute;
-    margin: auto auto;
-    height: 80vh;
-    width: 100vh;
+    top: 10vh;
+    right: 10vw;
+    width: 60vw;
+    padding: 10vh 10vw;
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 1;
   }
 
+  .x-icon {
+    display: block;
+  }
+
+  .certificates-block {
+    font-size: 12px;
+    position: absolute;
+    bottom: 10vh;
+    right: 10vw;
+    width: 60vw;
+    padding: 10vh 10vw;
+    background-color: rgba(0, 0, 0, 0.852);
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width:500px) {
   .change-block {
     display: flex;
     gap: 15px;
     justify-content: center;
     align-items: center;
   }
-}
-
-@media only screen and (max-width:768px) {
   .mainsection1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    position: relative;
+    
   }
 
   .mainsection1 .grid-block:nth-child(2) .change-block {
