@@ -8,7 +8,7 @@ const Me = ({ onMeChange }) => {
 
     const { language } = useLanguage();
     return (
-        <div className='about_me-block'>
+        <div className='about_me-block shadow'>
             { language === 'es' ? 
                 <>
                     <p>Soy un <strong>apasionado de la tecnología</strong> y del cómo funcionan las "cosas"</p>

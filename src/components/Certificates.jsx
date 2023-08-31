@@ -9,7 +9,7 @@ const Certificates = ({ onCertificatesChange }) => {
     const { language } = useLanguage();
 
     return (
-        <div className='certificates-block'>
+        <div className='certificates-block shadow'>
             <ul className='list-of-certificates'>
                 <li className='certificate-link'><img src="./src/assets/coder.jpeg" alt="CoderHouse icon" width={35} /> { language === 'es' ? 'Curso Desarrollo web (2022)' : 'Web Development Course (2022)'}
                     <a href="https://us.coderhouse.com/certificados/624ae07573f89c0018990a75" target="_blank" rel="noopener noreferrer">

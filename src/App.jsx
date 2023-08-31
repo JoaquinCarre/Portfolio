@@ -27,20 +27,20 @@ function App() {
               icon={<span>👨‍💻</span>} />
             <VideoBackground videoUrl="./src/assets/video/blue-bg.mp4" />
           </section>
-          <section className="mainsection" id='projects'>
+          <section className="mainsection mainsection2" id='projects'>
             <TitleSection backgroundColor="#3d3c3b"
               icon={<span>📁</span>}
               title={language === 'es' ? 'Mis Proyectos' : 'My Projects' } />
             <GridItem section="projects" gridCanva="grid-block span-2" backgroundColor="#7c8071" texts={["Proyectos"]} />
           </section>
-          <section className="mainsection" id='skills'>
+          <section className="mainsection mainsection2" id='skills'>
             <TitleSection backgroundColor="#231AAB"
               title={language === 'es' ? 'Mis Habilidades Tecnológicas' : 'My Tech Skills' }
               icon={<span>💻</span>} />
             <GridItem section="skills" gridCanva="grid-block span-2" backgroundColor="#281DEF"
               texts={["Lista de habilidades"]} />
           </section>
-          <section className="mainsection" id='contact'>
+          <section className="mainsection mainsection2" id='contact'>
             <TitleSection backgroundColor="#322F6B"
               title={language === 'es' ? 'Contacto' : 'Contact' }
               icon={<span>📪</span>} /> {/* IDEA ICONO FORMULARIO: Primero aparece el icono 📪, al escribir dentro se abre el buzon 📭, si borra todo el contenido se cierra 📪, si envia el formulario se sube la palanca en buzon y deja una carta 📬, seguidamente se cierra al cabo de 1 segundo con la palanca arriba 📫, si vuelve a escribir el formulario este baja la palanca y se abre 📭 y vuelve a iniciar toda la secuencia. */}
