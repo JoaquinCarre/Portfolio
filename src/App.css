@@ -142,6 +142,7 @@ section {
 
 .image-me {
   grid-area: "picture";
+  padding-top: 57px;
 }
 
 .me {
@@ -495,7 +496,7 @@ video {
   }
 
   .block-text {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .block-text-bold {
@@ -558,7 +559,6 @@ video {
               9px -9px 18px #929292;
   display: flex;
   flex-direction: column;
-  transition: .4s;
   position: relative;
 }
 
@@ -631,6 +631,37 @@ video {
   text-decoration: underline;
 }
 
+@media only screen and (max-width:768px) {
+  .projects-content {
+    padding: 30px 0px 10px 0px;
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 300px;
+    height: 300px;
+  }
+
+  .img-project-card img {
+    max-width: 300px;
+  }
+
+  .title-project-card {
+    font-size: 16px;
+  }
+  
+  .description-project-card {
+    z-index: 1;
+    margin: 0px;
+    font-size: 12px;
+    justify-self: flex-start;
+  }
+
+  .links-project-card .link {
+    font-size: 13px;
+  }
+}
+
 /* HABILIDADES */
 .block-skill-card {
   border: #282828 4px solid;
@@ -695,9 +726,37 @@ video {
   margin: 0px 10px;
 }
 
-@media only screen and (max-width:900px) {
+.icon-tech-skill {
+  width: 50px;
+}
+
+@media only screen and (max-width:1000px) {
   .block-skill-card {
-    width: 400px;
+    max-width: 600px;
+    min-width: 400px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .block-skill-card {
+    padding: 10px;
+    margin: 10px 20px;
+  }
+
+  .title-skill-card {
+    top: -16px;
+    font-size: 18px;
+  }
+
+  .icon-tech-skill {
+    width: 30px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .block-skill-card {
+    max-width: 400px;
+    min-width: 250px;
   }
 }
 
