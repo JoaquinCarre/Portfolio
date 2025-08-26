@@ -756,6 +756,7 @@ video {
   .title-skill-card {
     top: -16px;
     font-size: 18px;
+    -webkit-text-stroke: 0.4px black;
   }
 
   .icon-tech-skill {
