@@ -64,7 +64,7 @@ header {
 
 .button-lang-es {
   padding: 0px;
-  background-image: url("./src/assets/icon-spanish.png");
+  background-image: url("./assets/icon-spanish.png");
   background-position: center center;
   background-size: cover;
   width: 40px;
@@ -84,7 +84,7 @@ header {
 
 .button-lang-en {
   padding: 0px;
-  background-image: url("./src/assets/icon-english.png");
+  background-image: url("./assets/icon-english.png");
   background-position: center center;
   background-size: cover;
   width: 40px;
@@ -241,7 +241,7 @@ video {
   box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
               0 0  0 2px rgb(190, 190, 190),
               0.3em 0.3em 1em rgba(0,0,0,0.3);
- }
+}
 
 .x-icon {
   position: absolute;
@@ -586,6 +586,7 @@ video {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  background-color: #393939;
 }
 
 .title-project-card {
@@ -799,4 +800,43 @@ input, textarea {
 
 textarea {
   resize: none;
+}
+
+/* Footer */
+
+footer {
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  height: 2px;
+  opacity: 0;
+  transform: scaleY(0.2);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  height: 10px;
+  transform: scaleY(1);
+  pointer-events: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  max-width: 100vw;
+  margin: 0 auto;
+  font-size: 9px;
+}
+
+.footer-content p {
+  margin: 0 10px;
 }

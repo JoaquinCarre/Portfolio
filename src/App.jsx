@@ -1,10 +1,12 @@
-import React from 'react';
 import './App.css';
 import { useLanguage } from './components/context/LanguageContext';
 import Navbar from './components/Navbar';
 import GridItem from './components/GridItem';
 import TitleSection from './components/TitleSection';
 import VideoBackground from './components/VideoBackground';
+import Footer from './components/Footer';
+import menobg from './assets/me-nobg.png';
+import video from './assets/video/blue-bg.mp4';
 
 function App() {
   const { language } = useLanguage();
@@ -17,7 +19,7 @@ function App() {
       <main>
         <div className='grid-components'>
           <section className='mainsection mainsection1' id='about_me'>
-            <GridItem section="about me" gridCanva="grid-block" personalImage="./src/assets/me-nobg.png" backgroundColor="#050045" />
+            <GridItem section="about me" gridCanva="grid-block" personalImage={menobg} backgroundColor="#050045" />
             <GridItem section="about me" gridCanva="grid-block" backgroundColor="#050045" me
               texts={language === 'es' ? ["Hola, soy"] : ["Hi, I'm"] }
               textsBold={["Joaquín Carré"]}
@@ -25,7 +27,7 @@ function App() {
             <GridItem section="about me" gridCanva="grid-block" backgroundColor="#050045" career
               textsBold={language === 'es' ? ["Programador Web", "Full Stack", "JavaScript"] : ["Full Stack", "Web Developer", "JavaScript"]}
               icon={<span>👨‍💻</span>} />
-            <VideoBackground videoUrl="./src/assets/video/blue-bg.mp4" />
+            <VideoBackground videoUrl={video} />
           </section>
           <section className="mainsection mainsection2" id='projects'>
             <TitleSection backgroundColor="#3d3c3b"
@@ -50,6 +52,7 @@ function App() {
           </section>
         </div>
       </main>
+      <Footer />
     </>
   )
 }

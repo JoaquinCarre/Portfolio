@@ -5,6 +5,12 @@ import ProjectCard from './ProjectCard';
 import SkillsCards from './SkillsCards';
 import ContactForm from './ContactForm';
 import { useLanguage } from './context/LanguageContext';
+import iconblue from '../assets/chevron-icon-blue.png';
+import iconmail from '../assets/icon-mail.png';
+import jovenaccion from '../assets/img-jovenaccion.png';
+import simonsays from '../assets/img-simonsays.png';
+import equiludi from '../assets/img-equinoccioludico.png';
+import equiludi2 from '../assets/img-equinoccioludico-backend.png';
 
 const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalImage, me, career}) => {
   const [showMe, setShowMe] = useState(false);
@@ -63,7 +69,7 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
             </div>
             <div className='alternative-contact'>
               <a href="mailto:joa_carre21@hotmail.com">
-                <img src="./src/assets/icon-mail.png" alt="Icono Mail" />
+                <img src={iconmail} alt="Icono Mail" />
               </a>
               <h4 className='text-alternative-contact'>joa_carre21@hotmail.com</h4>
             </div>
@@ -90,7 +96,7 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
                     <p>{text}</p>
                   </div>
                 ))}
-                <img src="./src/assets/chevron-icon-blue.png" alt="chevron icon" className='chevron-icon' width={40}/>
+                <img src={iconblue} alt="chevron icon" className='chevron-icon' width={40}/>
               </>
             }
             {showCertificates && <Certificates  onCertificatesChange={handleCloseCertificates} />}
@@ -104,10 +110,10 @@ const GridItem = ({ section, backgroundColor, texts, textsBold, icon, personalIm
     return (
       <div className="projects-block span-2" style={{ backgroundColor }}>
         <div className="block-content projects-content">
-          <ProjectCard image="./src/assets/img-jovenaccion.png" title="Jóvenes en Acción" description={ language === 'es' ? <>Web creada bajo el programa <strong>Proyecto Real</strong> de <strong style={{color:"black"}}>CoderHouse</strong>, beneficio obtenido por estar en el TOP 10% de alumnos en el curso de JavaScript.</> : <>Website created under the <strong>"Proyecto Real"</strong> program by <strong style={{color:"black"}}>CoderHouse</strong>, a benefit obtained for being in the top 10% of students in the JavaScript course.</>} linkWeb="https://jovenaccion.com" />
-          <ProjectCard image="./src/assets/img-simonsays.png" title={ language === 'es' ? "Simón Dice" : "Simon Says"} description={ language === 'es' ? <><strong>Simón Dice</strong> es un juego donde se crea una serie de sonidos y luces que el jugador debe repetir.</> : <> <strong>Simon Says</strong> is a game where a series of sounds and lights are created, which the player must repeat. </>} linkWeb="https://joaquincarre.github.io/Simon-Says/" linkGH="https://github.com/JoaquinCarre/Simon-Says" />
-          <ProjectCard image="./src/assets/img-equinoccioludico.png" title="Equinoccio Lúdico I" description={ language === 'es' ? <>Proyecto realizado en el curso de <strong>ReactJS</strong> de <strong style={{color:"black"}}>CoderHouse</strong></> : <>Project made in the <strong>ReactJS</strong> course at <strong style={{color:"black"}}>CoderHouse</strong></>} linkWeb="https://joaquincarre.github.io/equinoccio-ludico-carre/" linkGH="https://github.com/JoaquinCarre/equinoccio-ludico-carre" />
-          <ProjectCard image="./src/assets/img-equinoccioludico-backend.png" title="Equinoccio Lúdico II" description={ language === 'es' ? <>Proyecto realizado en el curso de <strong>BackEnd</strong> de <strong style={{color:"black"}}>CoderHouse</strong></> : <>Project made in the <strong>BackEnd</strong> course at <strong style={{color:"black"}}>CoderHouse</strong></>} linkWeb="https://proyecto-final-backend-coderhouse-1786-dev.fl0.io/" linkGH="https://github.com/JoaquinCarre/proyecto-final-backend-coderhouse" />
+          <ProjectCard image={jovenaccion} title="Jóvenes en Acción" description={ language === 'es' ? <>Web creada bajo el programa <strong>Proyecto Real</strong> de <strong style={{color:"black"}}>CoderHouse</strong>, beneficio obtenido por estar en el TOP 10% de alumnos en el curso de JavaScript.</> : <>Website created under the <strong>"Proyecto Real"</strong> program by <strong style={{color:"black"}}>CoderHouse</strong>, a benefit obtained for being in the top 10% of students in the JavaScript course.</>} linkWeb="https://web.archive.org/web/20240528165033/https://www.jovenaccion.com/" />
+          <ProjectCard image={simonsays} title={ language === 'es' ? "Simón Dice" : "Simon Says"} description={ language === 'es' ? <><strong>Simón Dice</strong> es un juego donde se crea una serie de sonidos y luces que el jugador debe repetir.</> : <> <strong>Simon Says</strong> is a game where a series of sounds and lights are created, which the player must repeat. </>} linkWeb="https://joaquincarre.github.io/Simon-Says/" linkGH="https://github.com/JoaquinCarre/Simon-Says" />
+          <ProjectCard image={equiludi} title="Equinoccio Lúdico I" description={ language === 'es' ? <>Proyecto realizado en el curso de <strong>ReactJS</strong> de <strong style={{color:"black"}}>CoderHouse</strong></> : <>Project made in the <strong>ReactJS</strong> course at <strong style={{color:"black"}}>CoderHouse</strong></>} linkWeb="https://joaquincarre.github.io/equinoccio-ludico-carre/" linkGH="https://github.com/JoaquinCarre/equinoccio-ludico-carre" />
+          <ProjectCard image={equiludi2} title="Equinoccio Lúdico II" description={ language === 'es' ? <>Proyecto realizado en el curso de <strong>BackEnd</strong> de <strong style={{color:"black"}}>CoderHouse</strong></> : <>Project made in the <strong>BackEnd</strong> course at <strong style={{color:"black"}}>CoderHouse</strong></>} /* linkWeb="https://proyecto-final-backend-coderhouse-1786-dev.fl0.io/"  */linkGH="https://github.com/JoaquinCarre/proyecto-final-backend-coderhouse" />
         </div>
       </div>
     );
