@@ -391,6 +391,14 @@ video {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 0.5fr 2fr;
   }
+
+  .grid-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  }
   
   .mainsection1 {
     grid-template-rows: 1fr 1fr;
@@ -601,6 +609,7 @@ video {
   margin: 0px;
   font-size: 14px;
   justify-self: flex-start;
+  color: white;
 }
 
 .description-project-card strong {
@@ -751,6 +760,22 @@ video {
 
   .icon-tech-skill {
     width: 30px;
+  }
+
+  .separator1 {
+    width: 100px;
+  }
+
+  .separator2 {
+    width: 95px;
+  }
+
+  .separator3 {
+    width: 170px;
+  }
+
+  .separator4 {
+    width: 100px;
   }
 }
 
