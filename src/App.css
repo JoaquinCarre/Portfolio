@@ -4,13 +4,21 @@
   font-family: monospace, 'Courier New', Courier;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }
 
 #root {
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
   margin: 0px;
   padding: 0px;
   text-align: center;
@@ -18,6 +26,9 @@
 
 header {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 2;
   width: 100vw;
 }
@@ -106,22 +117,20 @@ header {
 
 /* MAIN */
 .grid-components {
-  scroll-behavior: smooth;
   overflow-y: scroll; /* Habilitar el desplazamiento vertical */
   scroll-snap-type: y mandatory; /* Tipo de scroll snap vertical */
-  scroll-snap-stop: always; /* 👈 Evita que se salte de largo */
-  height: 100dvh; /* Altura del contenedor (tamaño de la ventana gráfica) */
+  height: 100vh; /* Altura del contenedor (tamaño de la ventana gráfica) */
 }
 
 .mainsection {
   scroll-snap-align: start; /* Comportamiento de alineación del scroll snap */
-  height: 100dvh; /* Altura de cada sección (tamaño de la ventana gráfica) */
+  height: 100vh; /* Altura de cada sección (tamaño de la ventana gráfica) */
 }
 
 section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 100dvh;
+  height: 100vh;
 }
 
 .span-2 {
@@ -247,8 +256,8 @@ video {
 .x-icon {
   position: absolute;
   cursor: pointer;
-  top: 0dvh;
-  right: 2dvh;
+  top: 0vh;
+  right: 2vh;
   font-size: 30px;
   display: none;
 }
@@ -452,10 +461,10 @@ video {
   .certificates-block {
     font-size: 12px;
     position: absolute;
-    bottom: 10dvh;
+    bottom: 10vh;
     right: 10vw;
     width: 60vw;
-    padding: 10dvh 10vw;
+    padding: 10vh 10vw;
     background-color: rgba(0, 0, 0, 0.95);
     opacity: 1;
     display: flex;
@@ -485,14 +494,14 @@ video {
   .about_me-block {
     top: -250px;
     right: auto;
-    padding: 5dvh 5vw;
+    padding: 5vh 5vw;
   }
 
   .certificates-block {
     top: -250px;
     bottom: auto;
     right: auto;
-    padding: 5dvh 5vw;
+    padding: 5vh 5vw;
   }
 
   .mainsection1 {
