@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 import SkillsCards from './SkillsCards';
 import ContactForm from './ContactForm';
 import { useLanguage } from './context/LanguageContext';
-import iconblue from '../assets/chevron-icon-blue.png';
+import iconblue from '../assets/hand-icon.png';
 import iconmail from '../assets/icon-mail.png';
 import jovenaccion from '../assets/img-jovenaccion.png';
 import simonsays from '../assets/img-simonsays.png';
