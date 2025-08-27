@@ -10,7 +10,7 @@
 
 #root {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   margin: 0px;
   padding: 0px;
   text-align: center;
@@ -110,18 +110,18 @@ header {
   overflow-y: scroll; /* Habilitar el desplazamiento vertical */
   scroll-snap-type: y mandatory; /* Tipo de scroll snap vertical */
   scroll-snap-stop: always; /* 👈 Evita que se salte de largo */
-  height: 100vh; /* Altura del contenedor (tamaño de la ventana gráfica) */
+  height: 100dvh; /* Altura del contenedor (tamaño de la ventana gráfica) */
 }
 
 .mainsection {
   scroll-snap-align: start; /* Comportamiento de alineación del scroll snap */
-  height: 100vh; /* Altura de cada sección (tamaño de la ventana gráfica) */
+  height: 100dvh; /* Altura de cada sección (tamaño de la ventana gráfica) */
 }
 
 section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 100vh;
+  height: 100dvh;
 }
 
 .span-2 {
@@ -247,8 +247,8 @@ video {
 .x-icon {
   position: absolute;
   cursor: pointer;
-  top: 0vh;
-  right: 2vh;
+  top: 0dvh;
+  right: 2dvh;
   font-size: 30px;
   display: none;
 }
@@ -443,10 +443,10 @@ video {
   .certificates-block {
     font-size: 12px;
     position: absolute;
-    bottom: 10vh;
+    bottom: 10dvh;
     right: 10vw;
     width: 60vw;
-    padding: 10vh 10vw;
+    padding: 10dvh 10vw;
     background-color: rgba(0, 0, 0, 0.95);
     opacity: 1;
     display: flex;
@@ -476,14 +476,14 @@ video {
   .about_me-block {
     top: -250px;
     right: auto;
-    padding: 5vh 5vw;
+    padding: 5dvh 5vw;
   }
 
   .certificates-block {
     top: -250px;
     bottom: auto;
     right: auto;
-    padding: 5vh 5vw;
+    padding: 5dvh 5vw;
   }
 
   .mainsection1 {
