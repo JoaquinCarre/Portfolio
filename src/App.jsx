@@ -37,7 +37,7 @@ function App() {
           </section>
           <section className="mainsection mainsection2" id='skills'>
             <TitleSection backgroundColor="#231AAB"
-              title={language === 'es' ? 'Mis Habilidades Tecnológicas' : 'My Tech Skills' }
+              title={language === 'es' ? 'Mis Habilidades Técnicas' : 'My Tech Skills' }
               icon={<span>💻</span>} />
             <GridItem section="skills" gridCanva="grid-block span-2" backgroundColor="#281DEF"
               texts={["Lista de habilidades"]} />
