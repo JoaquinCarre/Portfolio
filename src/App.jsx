@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import GridItem from './components/GridItem';
 import TitleSection from './components/TitleSection';
 import VideoBackground from './components/VideoBackground';
-import Footer from './components/Footer';
+/* import Footer from './components/Footer'; */
 import menobg from './assets/me-nobg.png';
 import video from './assets/video/blue-bg.mp4';
 
@@ -52,7 +52,7 @@ function App() {
           </section>
         </div>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
