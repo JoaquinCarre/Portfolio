@@ -575,6 +575,7 @@ video {
   justify-content: center;
   overflow: auto;
   gap: 50px;
+  margin-bottom: 20px;
 }
 
 .project-card {
@@ -690,6 +691,7 @@ video {
 
   .links-project-card .link {
     font-size: 13px;
+    color: white;
   }
 }
 
