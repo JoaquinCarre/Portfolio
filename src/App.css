@@ -696,6 +696,12 @@ video {
   }
 }
 
+@media only screen and (max-width:500px) {
+  .projects-content {
+    margin-bottom: 35px;
+  }
+}
+
 /* HABILIDADES */
 .block-skill-card {
   border: #282828 4px solid;
