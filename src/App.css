@@ -271,6 +271,18 @@ video {
   color: white;
 }
 
+.js-link {
+  position: relative;
+}
+
+.top10-img {
+  align-self: flex-start;
+  margin: 0px auto;
+  position: absolute;
+  top: 22px;
+  left: 25px;
+}
+
 .list-of-certificates {
   padding: 10px;
   display: flex;
@@ -383,6 +395,13 @@ video {
   
 }
 
+@media only screen and (max-width:1000px) {
+  .certificates-block {
+/*     padding: 0px; */
+    margin: 10px;
+  }
+}
+
 @media only screen and (max-width:768px) {
   section {
     grid-template-columns: repeat(1, 1fr);
@@ -468,10 +487,10 @@ video {
   .certificates-block {
     position: absolute;
     top: 20vh;
-    right: 12vw;
-    width: 55vw;
+    right: 10.5vw;
+    width: 65vw;
     height: 54vh;
-    padding: 10vh 10vw;
+    padding: 30px;
     background-color: rgba(0, 0, 0, 0.95);
     opacity: 1;
     display: flex;
@@ -500,15 +519,15 @@ video {
 
   .about_me-block {
     font-size: 13px;
-    top: -300px;
+    top: -320px;
     right: auto;
-
   }
 
   .certificates-block {
-    top: -350px;
+    top: -380px;
     right: auto;
     padding: 5vh 5vw;
+    width: 70vw;
   }
 
   .mainsection1 {
