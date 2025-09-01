@@ -273,6 +273,9 @@ video {
 
 .list-of-certificates {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .list-of-certificates img {
@@ -292,7 +295,7 @@ video {
 
 .certificate-link {
   text-align: start;
-  margin: 12px auto;
+  margin: 12px 0;
   color: white;
 }
 
@@ -443,15 +446,19 @@ video {
   }
 
   .about_me-block {
-    font-size: 12px;
     position: absolute;
-    top: 70px;
-    right: 16vw;
-    width: 60vw;
+    top: 20vh;
+    right: 12vw;
+    width: 65vw;
+    height: 65vh;
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.95);
     opacity: 1;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
   }
 
   .x-icon {
@@ -459,11 +466,11 @@ video {
   }
 
   .certificates-block {
-    font-size: 12px;
     position: absolute;
-    bottom: 10vh;
-    right: 10vw;
-    width: 60vw;
+    top: 20vh;
+    right: 12vw;
+    width: 55vw;
+    height: 54vh;
     padding: 10vh 10vw;
     background-color: rgba(0, 0, 0, 0.95);
     opacity: 1;
@@ -492,14 +499,14 @@ video {
   }
 
   .about_me-block {
-    top: -250px;
+    font-size: 13px;
+    top: -300px;
     right: auto;
-    padding: 5vh 5vw;
+
   }
 
   .certificates-block {
-    top: -250px;
-    bottom: auto;
+    top: -350px;
     right: auto;
     padding: 5vh 5vw;
   }
